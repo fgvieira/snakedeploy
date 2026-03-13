@@ -1,5 +1,60 @@
 # Changelog
 
+## [0.17.0](https://github.com/fgvieira/snakedeploy/compare/v0.16.0...v0.17.0) (2026-03-13)
+
+
+### Features
+
+* ability to either define branch or tag when deploying ([8a079f0](https://github.com/fgvieira/snakedeploy/commit/8a079f05d23bab6a91d385a439c903336153b1fa))
+* add logger plugin scaffold ([#94](https://github.com/fgvieira/snakedeploy/issues/94)) ([da2d149](https://github.com/fgvieira/snakedeploy/commit/da2d149dbf056c027872aba753ea5c500fcf76a4))
+* add method to obtain schemas from workflow repo ([#60](https://github.com/fgvieira/snakedeploy/issues/60)) ([2834e39](https://github.com/fgvieira/snakedeploy/commit/2834e3911e970ddd56c88d1614fe525acb448191))
+* add plugin scaffolding ([#89](https://github.com/fgvieira/snakedeploy/issues/89)) ([c1b8fa0](https://github.com/fgvieira/snakedeploy/commit/c1b8fa00d4554e5aa24be630fbd2663d6e002d04))
+* add PR creation to pin-conda-envs ([58ce050](https://github.com/fgvieira/snakedeploy/commit/58ce05026cc33941203d1449babf58f92df18738))
+* add profile directory and license file to deployment ([#75](https://github.com/fgvieira/snakedeploy/issues/75)) ([f52f7ef](https://github.com/fgvieira/snakedeploy/commit/f52f7eff212fcdecd83c4eb39ad79223167e7790))
+* add subcommand for updating snakemake wrappers in given Snakefiles ([#32](https://github.com/fgvieira/snakedeploy/issues/32)) ([d291113](https://github.com/fgvieira/snakedeploy/commit/d291113b20682d1562b0fcf42007893542a39b24))
+* add subcommands to update and pin given conda environment definition files ([#29](https://github.com/fgvieira/snakedeploy/issues/29)) ([9058377](https://github.com/fgvieira/snakedeploy/commit/90583779367b29c0eaced16b93b74802647c94de))
+* added announcement robot ([#109](https://github.com/fgvieira/snakedeploy/issues/109)) ([3cb9b56](https://github.com/fgvieira/snakedeploy/commit/3cb9b56d1ed1aadec8837b41ddfb7852bce1b17f))
+* Allow creation of PRs upon wrapper updates ([#111](https://github.com/fgvieira/snakedeploy/issues/111)) ([6f7ed82](https://github.com/fgvieira/snakedeploy/commit/6f7ed8253b59b0afc3d16730f54c55798c03e8e7))
+* expose subcommand for collecting files into tabular structure, improved output ([#115](https://github.com/fgvieira/snakedeploy/issues/115)) ([8794901](https://github.com/fgvieira/snakedeploy/commit/87949015af811362631bb923b9a139d7d03cf261))
+* if requested, automatically generate pull requests when updating conda envs ([#34](https://github.com/fgvieira/snakedeploy/issues/34)) ([a0e978a](https://github.com/fgvieira/snakedeploy/commit/a0e978af468f97c4218d3f0169c4e0e2c674f4b7))
+* only update pinning if env was updated; ability to specify a regex for entity determination and adding labels when creating PRs from updated envs ([#40](https://github.com/fgvieira/snakedeploy/issues/40)) ([f074e35](https://github.com/fgvieira/snakedeploy/commit/f074e35f993b2b325f29e34e908dafb1bfcf150f))
+* require either --branch or --tag to be specified ([d0ae54b](https://github.com/fgvieira/snakedeploy/commit/d0ae54b3b4ad2a64108ef47fd4ed298175d12eb8))
+* test of adding Gitlab provider ([#27](https://github.com/fgvieira/snakedeploy/issues/27)) ([47fc31b](https://github.com/fgvieira/snakedeploy/commit/47fc31bcbfd07d391a81498eecfa9fbae61c9613))
+* update wrappers to their specific latest version instead of the global latest version of the wrapper repo ([#105](https://github.com/fgvieira/snakedeploy/issues/105)) ([a5d3bf8](https://github.com/fgvieira/snakedeploy/commit/a5d3bf8dc894dde96893b1b9557dfb4247da216d))
+
+
+### Bug Fixes
+
+* add debugging code for conda env update subcommand ([#50](https://github.com/fgvieira/snakedeploy/issues/50)) ([0ba8e30](https://github.com/fgvieira/snakedeploy/commit/0ba8e3024504601793931323599eebe4a95b7d55))
+* better error handling when parsing package versions ([#47](https://github.com/fgvieira/snakedeploy/issues/47)) ([d20ff11](https://github.com/fgvieira/snakedeploy/commit/d20ff112b7ce858056c5f5111d09f2705b25dced))
+* consider config.yml as configuration filename ([#85](https://github.com/fgvieira/snakedeploy/issues/85)) ([6a8fd0d](https://github.com/fgvieira/snakedeploy/commit/6a8fd0d2369adc7b9c05ec4d7e719c436cd4576f))
+* convert filepath to str ([4ba5cbc](https://github.com/fgvieira/snakedeploy/commit/4ba5cbc52d4cf0a6d4273d95e223e7b78bbfd581))
+* fix release process ([422b22d](https://github.com/fgvieira/snakedeploy/commit/422b22d14af7ff7f22bb297277105e59f1f9ada6))
+* Fix snakedeploy hanging forever ([#67](https://github.com/fgvieira/snakedeploy/issues/67)) ([f6d1ce5](https://github.com/fgvieira/snakedeploy/commit/f6d1ce55cfd21d5362307881c08b22ab09aa57f9))
+* get release-please to work again, by removing package-name entry ([#77](https://github.com/fgvieira/snakedeploy/issues/77)) ([44a46ed](https://github.com/fgvieira/snakedeploy/commit/44a46ed495e3848b7971c3c0cf4517b4b1382a6a))
+* glob conda env files passed to related subcommands ([#36](https://github.com/fgvieira/snakedeploy/issues/36)) ([c72d401](https://github.com/fgvieira/snakedeploy/commit/c72d4011a8580eb6718395c9972a6446fcf711ab))
+* if nothing to commit, do not create PR ([#42](https://github.com/fgvieira/snakedeploy/issues/42)) ([84bb903](https://github.com/fgvieira/snakedeploy/commit/84bb903a15a5443de515e73c25c559139cce1479))
+* minor rephrasing of CLI help. ([4939d9c](https://github.com/fgvieira/snakedeploy/commit/4939d9ce656f27157de005353df9dc353ef10694))
+* only consider specified packages when stopping because of downgrading ([#65](https://github.com/fgvieira/snakedeploy/issues/65)) ([2aa3f82](https://github.com/fgvieira/snakedeploy/commit/2aa3f82bb44b91dd6288f88226ffdac28d4fcf78))
+* remove accidental debugger invocation ([0e8df29](https://github.com/fgvieira/snakedeploy/commit/0e8df298f0aa049fdee5d8d403086c57a72bb482))
+* remove dbg code ([575be43](https://github.com/fgvieira/snakedeploy/commit/575be4385ec6a412161c56535cf8eeb71f4e21d6))
+* remove quotes around snakefile statement ([ad7feaf](https://github.com/fgvieira/snakedeploy/commit/ad7feaf6fb602bb70209d9f8d8525d776d66b178))
+* scheduler template ([#110](https://github.com/fgvieira/snakedeploy/issues/110)) ([d7c8907](https://github.com/fgvieira/snakedeploy/commit/d7c8907e2c59b004485d9d8081c606790074e08a))
+* shuffle conda envs before updating (this ensures that running this in a fallible github action cron job still leads to updating all envs from time to time) ([#46](https://github.com/fgvieira/snakedeploy/issues/46)) ([c6dad58](https://github.com/fgvieira/snakedeploy/commit/c6dad5819742a7fa84687e2f532224980de7e2b1))
+* synchronize scheduler skeleton ([#99](https://github.com/fgvieira/snakedeploy/issues/99)) ([0f0b4c1](https://github.com/fgvieira/snakedeploy/commit/0f0b4c1381af5ac8c0f644ce744d2155c5e7c98e))
+* type annotations ([81948e0](https://github.com/fgvieira/snakedeploy/commit/81948e015f9bbec22788c38b2bfa179624fa0ad8))
+* update pixi envs for building ([#104](https://github.com/fgvieira/snakedeploy/issues/104)) ([a4aabc9](https://github.com/fgvieira/snakedeploy/commit/a4aabc9e38430b972e934b8db7db9d6fdc81d326)), closes [#102](https://github.com/fgvieira/snakedeploy/issues/102)
+* use conda package version parsing by obtaining conda version spec from github ([#52](https://github.com/fgvieira/snakedeploy/issues/52)) ([ed821c8](https://github.com/fgvieira/snakedeploy/commit/ed821c8e61c5ab84191e94ea4ce403200d2aa1fb))
+* various bug fixes in conda env update process ([#38](https://github.com/fgvieira/snakedeploy/issues/38)) ([2fde118](https://github.com/fgvieira/snakedeploy/commit/2fde11888fcac402612de3d4b4ec0775343a815f))
+* various robustness improvements for conda env update mechanism ([#44](https://github.com/fgvieira/snakedeploy/issues/44)) ([491c390](https://github.com/fgvieira/snakedeploy/commit/491c390621ffdbf7f0844767d40584c73e65ce83))
+
+
+### Documentation
+
+* add info on `profiles/` deployment to workflow_deployment.rst ([#114](https://github.com/fgvieira/snakedeploy/issues/114)) ([7a45aff](https://github.com/fgvieira/snakedeploy/commit/7a45aff3c0f1192ec3b3ebd4e3ef357d9c5645a0))
+* add missing docs ([33b2c80](https://github.com/fgvieira/snakedeploy/commit/33b2c80fb3948e6963856f4cb0c67c8d2a4f11ef))
+* improved help and docs ([#91](https://github.com/fgvieira/snakedeploy/issues/91)) ([80f9837](https://github.com/fgvieira/snakedeploy/commit/80f9837349bdf5cb16d40f94c46dbd2fc306946e))
+
 ## [0.16.0](https://github.com/snakemake/snakedeploy/compare/v0.15.0...v0.16.0) (2026-02-13)
 
 
